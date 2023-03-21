@@ -16,6 +16,8 @@ import { ChoiceComponent } from './pages/choice/choice.component';
 import {ButtonModule} from 'primeng/button';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { FooterComponent } from './footer/footer.component';
+import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     MenubarModule,
     TabMenuModule,
     BreadcrumbModule,
@@ -35,7 +38,8 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

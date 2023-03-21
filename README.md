@@ -9,3 +9,6 @@ ng build
 
 subir imagem no host
 firebase deploy
+
+budgets
+dentro de angular.json aumentar tamanho quando for gerar build

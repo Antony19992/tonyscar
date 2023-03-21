@@ -10,16 +10,24 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 
 import {MenubarModule} from 'primeng/menubar';
 import { NavbarComponent } from './navbar/navbar.component';
+import {TabMenuModule} from 'primeng/tabmenu';
+import {CardModule} from 'primeng/card';
+import { ChoiceComponent } from './pages/choice/choice.component';
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    ChoiceComponent
   ],
   imports: [
     BrowserModule,
     MenubarModule,
+    TabMenuModule,
+    ButtonModule,
+    CardModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),

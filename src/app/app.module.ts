@@ -14,18 +14,22 @@ import {TabMenuModule} from 'primeng/tabmenu';
 import {CardModule} from 'primeng/card';
 import { ChoiceComponent } from './pages/choice/choice.component';
 import {ButtonModule} from 'primeng/button';
+import {BreadcrumbModule} from 'primeng/breadcrumb';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ChoiceComponent
+    ChoiceComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     MenubarModule,
     TabMenuModule,
+    BreadcrumbModule,
     ButtonModule,
     CardModule,
     AppRoutingModule,

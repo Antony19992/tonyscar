@@ -21,3 +21,6 @@ deeppurple-amber.css
 indigo-pink.css
 pink-bluegrey.css
 purple-green.css
+
+biblioteca de ícones para tag <mat-icon>
+https://fonts.google.com/icons?hl=pt-br

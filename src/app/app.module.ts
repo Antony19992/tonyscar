@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrandComponent } from './pages/brand/brand.component';
+import {VirtualScrollerModule} from 'primeng/virtualscroller';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { BrandComponent } from './pages/brand/brand.component';
   ],
   imports: [
     BrowserModule,
+    VirtualScrollerModule,
     MaterialModule,
     MenubarModule,
     TabMenuModule,

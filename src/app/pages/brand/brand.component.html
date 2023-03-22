@@ -1,1 +1,7 @@
-<p>brand works!</p>
+<p-virtualScroller [value]="cars" scrollHeight="500px" [itemSize]="150">
+  <ng-template pTemplate="header">header</ng-template>
+  <ng-template pTemplate="item" let-car>
+    car content
+  </ng-template>
+  <ng-template pTemplate="footer">Footer Content</ng-template>
+</p-virtualScroller>

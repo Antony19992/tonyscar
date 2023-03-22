@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChoiceComponent } from '../app/pages/choice/choice.component';
+import { BrandComponent } from './pages/brand/brand.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'choice',
     component: ChoiceComponent,
+  },
+  {
+    path: 'brand',
+    component: BrandComponent
   }
 
 ];

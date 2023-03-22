@@ -18,6 +18,7 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrandComponent } from './pages/brand/brand.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     NavbarComponent,
     ChoiceComponent,
-    FooterComponent
+    FooterComponent,
+    BrandComponent
   ],
   imports: [
     BrowserModule,

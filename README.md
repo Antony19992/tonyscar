@@ -12,3 +12,12 @@ firebase deploy
 
 budgets
 dentro de angular.json aumentar tamanho quando for gerar build
+
+para alterar tema do material acesse o arquivo angular.json
+"styles":
+              "@angular/material/prebuilt-themes/NOME_DO_TEMA"
+disponíveis:
+deeppurple-amber.css
+indigo-pink.css
+pink-bluegrey.css
+purple-green.css

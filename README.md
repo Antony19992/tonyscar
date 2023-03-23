@@ -24,3 +24,6 @@ purple-green.css
 
 biblioteca de ícones para tag <mat-icon>
 https://fonts.google.com/icons?hl=pt-br
+
+documentacao de requisicoes ao banco firestore
+https://github.com/FirebaseExtended/rxfire/blob/main/docs/firestore.md

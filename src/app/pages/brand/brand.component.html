@@ -1,14 +1,13 @@
-
-<mat-card class="example-card">
+<mat-card class="example-card" *ngFor="let item of item$ | async" >
   <mat-card-header>
     <mat-card-title-group>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Small</mat-card-subtitle>
-      <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      <mat-card-title>{{ item.name }}</mat-card-title>
+      <mat-card-subtitle>{{ item.valor }}</mat-card-subtitle>
+      <img mat-card-sm-image src="../../../assets/gow.png" >
     </mat-card-title-group>
   </mat-card-header>
   <mat-card-content>
-    {{longText}}
+    {{item.desc}}
   </mat-card-content>
 </mat-card>
 

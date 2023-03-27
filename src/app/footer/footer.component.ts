@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import {MenuItem} from 'primeng/api';
 
@@ -10,12 +11,17 @@ import {MenuItem} from 'primeng/api';
 export class FooterComponent {
 
   public items: MenuItem[] = [];
+  urlpath = '';
+
+  constructor(private route: ActivatedRoute) {  }
 
   ngOnInit() {
+    this.urlpath = this.route.snapshot.params['path'];
+    console.log('caminho: '+this.urlpath)
       this.items = [
-          {label:'SixSeven'},
-          {label:'Revenda'},
-          {label:'Início'},
+          {label:this.urlpath},
+          {label:this.urlpath},
+          {label:this.urlpath},
       ];
   }
 }

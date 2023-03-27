@@ -1,3 +1,4 @@
+import { IncludeComponent } from './pages/include/include.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChoiceComponent } from '../app/pages/choice/choice.component';
@@ -11,11 +12,15 @@ const routes: Routes = [
   },
   {
     path: 'choice',
-    component: ChoiceComponent,
+    component: ChoiceComponent
   },
   {
     path: 'brand',
     component: BrandComponent
+  },
+  {
+    path: 'include',
+    component: IncludeComponent
   }
 
 ];

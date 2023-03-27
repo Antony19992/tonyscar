@@ -19,7 +19,7 @@ const routes: Routes = [
     component: BrandComponent
   },
   {
-    path: 'include',
+    path: 'include:id',
     component: IncludeComponent
   }
 

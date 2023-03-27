@@ -20,6 +20,7 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrandComponent } from './pages/brand/brand.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
+import { IncludeComponent } from './pages/include/include.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {VirtualScrollerModule} from 'primeng/virtualscroller';
     NavbarComponent,
     ChoiceComponent,
     FooterComponent,
-    BrandComponent
+    BrandComponent,
+    IncludeComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrandComponent } from './pages/brand/brand.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import { IncludeComponent } from './pages/include/include.component';
+import { BuyerService } from './services/buyer.service';
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import { IncludeComponent } from './pages/include/include.component';
     provideStorage(() => getStorage()),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [BuyerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

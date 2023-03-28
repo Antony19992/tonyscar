@@ -1,16 +1,33 @@
 import { Injectable } from '@angular/core';
 
-import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, addDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BuyerService {
-  item$: Observable<any[]>;
 
-  constructor(firestore: Firestore) { 
-    const dados = collection(firestore, 'items');
-    this.item$ = collectionData(dados);
+  data = {
+    name: 'Los Angeles 123',
+    state: 'CA 123',
+    country: 'USA 123'
+  };
+
+  constructor(private firestore: Firestore, public item: Observable<any[]>) {
   }
+
+
+getList(): Observable<any[]>{
+  const dados = collection(this.firestore, 'items');
+  return this.item = collectionData(dados);
+}
+
+insertDoc(){
+  const ref = collection(this.firestore, 'dados');
+  addDoc(ref, this.data);
+}
+
+
+
 }

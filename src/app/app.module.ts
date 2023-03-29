@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrandComponent } from './pages/brand/brand.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import { IncludeComponent } from './pages/include/include.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { IncludeComponent } from './pages/include/include.component';
     VirtualScrollerModule,
     MaterialModule,
     MenubarModule,
+    FormsModule,
     TabMenuModule,
     BreadcrumbModule,
     ButtonModule,

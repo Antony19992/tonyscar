@@ -18,7 +18,7 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrandComponent } from './pages/brand/brand.component';
+import { BrandComponent, DialogElementsDialog } from './pages/brand/brand.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import { IncludeComponent } from './pages/include/include.component';
 import { FormsModule } from '@angular/forms';
@@ -31,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     ChoiceComponent,
     FooterComponent,
     BrandComponent,
-    IncludeComponent
+    IncludeComponent,
+    DialogElementsDialog
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,10 @@
-import { addDoc, collection, Firestore } from '@angular/fire/firestore';
+import { collection, Firestore } from '@angular/fire/firestore';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BuyerService } from 'src/app/services/buyer.service';
 
 import {MatDialog} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-brand',
@@ -23,7 +24,7 @@ export class BrandComponent {
   }
 
   openDialog() {
-    this.dialog.open(DialogElementsExampleDialog);
+    this.dialog.open(DialogElementsDialog);
   }
 
   ngOnInit(){
@@ -40,7 +41,7 @@ export class BrandComponent {
   selector: 'dialog-elements-dialog',
   templateUrl: './dialog.elements.html',
 })
-export class DialogElementsExampleDialog {
+export class DialogElementsDialog {
 
   constructor(private dialog: MatDialog) {
 

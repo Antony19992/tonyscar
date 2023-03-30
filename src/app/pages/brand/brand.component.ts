@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BuyerService } from 'src/app/services/buyer.service';
 
+import {MatDialog} from '@angular/material/dialog';
+
 @Component({
   selector: 'app-brand',
   templateUrl: './brand.component.html',
@@ -11,15 +13,19 @@ import { BuyerService } from 'src/app/services/buyer.service';
 export class BrandComponent {
   item$?: Observable<any[]>;
 
-  data = {
-    pais: 'Brasil',
-    nome: 'Paraná'
+  data = { pais: 'Brasil', nome: 'Paraná' }
+
+  constructor(
+    private buyerSerivce: BuyerService,
+    private firestore: Firestore,
+    public dialog: MatDialog
+    ) {
   }
 
-
-  constructor( private buyerSerivce: BuyerService, private firestore: Firestore) {
-
+  openDialog() {
+    this.dialog.open(DialogElementsExampleDialog);
   }
+
   ngOnInit(){
     this.item$ =  this.buyerSerivce.getList();
   }
@@ -29,4 +35,17 @@ export class BrandComponent {
     this.buyerSerivce.includeDoc(colecao, this.data)
   }
 
+}
+@Component({
+  selector: 'dialog-elements-dialog',
+  templateUrl: './dialog.elements.html',
+})
+export class DialogElementsExampleDialog {
+
+  constructor(private dialog: MatDialog) {
+
+  }
+  closeWindow() {
+    this.dialog.closeAll();
+  }
 }

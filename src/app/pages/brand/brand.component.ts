@@ -1,9 +1,10 @@
 import { collection, Firestore } from '@angular/fire/firestore';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BuyerService } from 'src/app/services/buyer.service';
 
 import {MatDialog} from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,18 +14,22 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class BrandComponent {
   item$?: Observable<any[]>;
+  public minhaVariavel: string = 'Valor da minha variável';
 
   data = { pais: 'Brasil', nome: 'Paraná' }
 
   constructor(
     private buyerSerivce: BuyerService,
     private firestore: Firestore,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router
     ) {
   }
 
-  openDialog() {
-    this.dialog.open(DialogElementsDialog);
+  openDialog(param: any) {
+    const url = '/include/'+param
+    let info = this.router.navigateByUrl(url);
+    console.log("rota "+url)
   }
 
   ngOnInit(){
@@ -46,6 +51,7 @@ export class DialogElementsDialog {
   constructor(private dialog: MatDialog) {
 
   }
+  @Input() minhaVariavel?: string;
   closeWindow() {
     this.dialog.closeAll();
   }

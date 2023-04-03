@@ -1,9 +1,10 @@
 import { collection, Firestore } from '@angular/fire/firestore';
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BuyerService } from 'src/app/services/buyer.service';
 
 import {MatDialog} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 
 @Component({
@@ -23,8 +24,10 @@ export class BrandComponent {
     ) {
   }
 
-  openDialog() {
-    this.dialog.open(DialogElementsDialog);
+  openDialog(value: any) {
+    this.dialog.open(DialogElementsDialog, {
+      data: {item: value}
+    });
   }
 
   ngOnInit(){
@@ -41,10 +44,19 @@ export class BrandComponent {
   selector: 'dialog-elements-dialog',
   templateUrl: './dialog.elements.html',
 })
-export class DialogElementsDialog {
+export class DialogElementsDialog implements OnInit {
 
-  constructor(private dialog: MatDialog) {
+item?: any;
 
+  constructor(private dialog: MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data: any
+    ) {
+
+  }
+  ngOnInit(): void {
+    if(this.data && this.data.item){
+      this.item = this.data.item
+    }
   }
   closeWindow() {
     this.dialog.closeAll();

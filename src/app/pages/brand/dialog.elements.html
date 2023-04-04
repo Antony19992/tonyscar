@@ -2,23 +2,21 @@
 <div mat-dialog-content>
 
   <mat-form-field appearance="fill">
-    <mat-label>Input </mat-label>
-    <input matInput [value]="item.name">
+    <mat-label>Veículo</mat-label>
+    <input matInput [(ngModel)]="item.name">
   </mat-form-field><br>
+<mat-form-field appearance="fill">
+  <mat-label>Valor</mat-label>
+  <input matInput [(ngModel)]="item.valor" readonly>
+</mat-form-field><br>
   <mat-form-field appearance="fill">
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field><br>
-  <mat-form-field appearance="fill">
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
+    <mat-label>Descrição</mat-label>
+    <textarea matInput [(ngModel)]="item.desc"></textarea>
   </mat-form-field>
 
 
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close (click)="closeWindow()">Close</button>
+  <button style="margin-left: 45%;" mat-button mat-dialog-open (click)="enviar()">enviar</button>
 </div>

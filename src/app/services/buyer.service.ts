@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Firestore, collectionData, collection, addDoc } from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, addDoc, collectionSnapshots } from '@angular/fire/firestore';
+import { documentId } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
 //quando serviço é providedIn root não precisa colocar nos providers.
@@ -25,7 +26,8 @@ export class BuyerService {
   }
 
   includeDoc(collection: any, data: any): Boolean{
-    addDoc(collection, data)
+  addDoc(collection, data)
     return true
   }
+
 }

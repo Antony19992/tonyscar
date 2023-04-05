@@ -2,7 +2,8 @@ import { IncludeComponent } from './pages/include/include.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChoiceComponent } from '../app/pages/choice/choice.component';
-import { BrandComponent, DialogElementsDialog } from './pages/brand/brand.component';
+import { BrandComponent } from './pages/brand/brand.component';
+import { EditComponent } from './pages/edit/edit.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'include/:id',
     component: IncludeComponent
+  },
+  {
+    path: 'edit',
+    component: EditComponent
   }
 
 ];

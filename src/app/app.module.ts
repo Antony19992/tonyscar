@@ -18,10 +18,12 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrandComponent, DialogElementsDialog } from './pages/brand/brand.component';
+import { BrandComponent } from './pages/brand/brand.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import { IncludeComponent } from './pages/include/include.component';
 import { FormsModule } from '@angular/forms';
+import { DialogElementsDialog } from './pages/brand/dialog.component';
+import { DialogChoiceDialog } from './pages/choice/dialog.choice.component';
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     BrandComponent,
     IncludeComponent,
-    DialogElementsDialog
+    DialogElementsDialog,
+    DialogChoiceDialog
   ],
   imports: [
     BrowserModule,

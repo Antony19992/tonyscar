@@ -5,6 +5,8 @@ import { BuyerService } from 'src/app/services/buyer.service';
 
 import {MatDialog} from '@angular/material/dialog';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import Swal from 'sweetalert2'
+
 
 
 @Component({
@@ -73,8 +75,17 @@ veiculos: string = 'veiculo';
       valor: this.item.valor,
       desc: this.item.desc
     }
-    let colecao = collection(this.firestore, this.veiculos);
-    console.log('form:', JSON.stringify(colecao) );    
+      let colecao = collection(this.firestore, this.veiculos);
+      console.log('form:', JSON.stringify(colecao) );    
       this.buyerSerivce.updateDoc(this.veiculos, doc, form);
+      this.dialog.closeAll();
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Compra realizada',
+        showConfirmButton: false,
+        timer: 1500
+      })
   }
+
 }

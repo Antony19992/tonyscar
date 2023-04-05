@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Firestore, collectionData, collection, addDoc, collectionSnapshots } from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, addDoc, collectionSnapshots, updateDoc, setDoc, doc } from '@angular/fire/firestore';
 import { documentId } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
@@ -20,7 +20,7 @@ export class BuyerService {
   }
 
   getList() {
-    const ref = collection(this.firestore, 'items');
+    const ref = collection(this.firestore, 'veiculo');
     this.item$ = collectionData(ref);
     return this.item$;
   }
@@ -28,6 +28,10 @@ export class BuyerService {
   includeDoc(collection: any, data: any): Boolean{
   addDoc(collection, data)
     return true
+  }
+
+  async updateDoc(collection: string,docId: string, object: any){
+    await setDoc(doc(this.firestore, collection, docId), object);
   }
 
 }

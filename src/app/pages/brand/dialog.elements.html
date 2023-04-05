@@ -3,7 +3,11 @@
 
   <mat-form-field appearance="fill">
     <mat-label>Veículo</mat-label>
-    <input matInput [(ngModel)]="item.name">
+    <input matInput [(ngModel)]="item.veiculo">
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Cor</mat-label>
+    <input matInput [(ngModel)]="item.cor">
   </mat-form-field><br>
 <mat-form-field appearance="fill">
   <mat-label>Valor</mat-label>
@@ -18,5 +22,5 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close (click)="closeWindow()">Close</button>
-  <button style="margin-left: 45%;" mat-button mat-dialog-open (click)="enviar()">enviar</button>
+  <button style="margin-left: 45%;" mat-button mat-dialog-open (click)="enviar(item.veiculo)">enviar</button>
 </div>

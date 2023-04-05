@@ -1,11 +1,10 @@
-import { collection, CollectionReference, Firestore, addDoc } from '@angular/fire/firestore';
+import { collection, Firestore } from '@angular/fire/firestore';
 import { Component, Inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BuyerService } from 'src/app/services/buyer.service';
 
 import {MatDialog} from '@angular/material/dialog';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { collectionGroup, documentId } from 'firebase/firestore';
 
 
 @Component({
@@ -36,9 +35,12 @@ export class BrandComponent {
   }
 
   add(){
-    let colecao = collection(this.firestore, 'novo')
+    let colecao = collection(this.firestore, 'tinhaNao')
     this.buyerSerivce.includeDoc(colecao, this.data)
   }
+
+
+
 
 }
 @Component({
@@ -48,6 +50,7 @@ export class BrandComponent {
 export class DialogElementsDialog implements OnInit {
 
 item?: any;
+veiculos: string = 'veiculo';
 
   constructor(private dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -64,17 +67,14 @@ item?: any;
     this.dialog.closeAll();
   }
 
-  enviar() {
+  enviar(doc: string) {
     const form = {
-      nome: this.item.name,
+      name: this.item.name,
       valor: this.item.valor,
       desc: this.item.desc
     }
-    let colecao = collection(this.firestore, 'comprado')
-    //this.buyerSerivce.includeDoc(colecao, form)
-    console.log('form:', JSON.stringify(colecao) );
-
-
+    let colecao = collection(this.firestore, this.veiculos);
+    console.log('form:', JSON.stringify(colecao) );    
+      this.buyerSerivce.updateDoc(this.veiculos, doc, form);
   }
-
 }

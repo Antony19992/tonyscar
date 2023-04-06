@@ -24,6 +24,7 @@ import { IncludeComponent } from './pages/include/include.component';
 import { FormsModule } from '@angular/forms';
 import { DialogElementsDialog } from './pages/brand/dialog.component';
 import { DialogChoiceDialog } from './pages/choice/dialog.choice.component';
+import { EditComponent } from './pages/edit/edit.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { DialogChoiceDialog } from './pages/choice/dialog.choice.component';
     BrandComponent,
     IncludeComponent,
     DialogElementsDialog,
-    DialogChoiceDialog
+    DialogChoiceDialog,
+    EditComponent
   ],
   imports: [
     BrowserModule,

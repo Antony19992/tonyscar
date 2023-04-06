@@ -10,3 +10,21 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 500px)
+{
+  h1{
+    margin-left:33%;
+  }
+}
+@media (min-width: 700px)
+{
+  h1{
+    margin-left:42%;
+  }
+}
+@media (min-width: 900px)
+{
+  h1{
+    margin-left:45%;
+  }
+}

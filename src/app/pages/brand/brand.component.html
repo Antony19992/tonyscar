@@ -1,0 +1,15 @@
+<mat-card class="example-card" *ngFor="let item of item$ | async" >
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ item.veiculo }}</mat-card-title>
+      <mat-card-subtitle>{{ item.cor }}</mat-card-subtitle>
+      <img style="width: 80px; height: 70px;" mat-card-sm-image src="../../../assets/{{item.img}}" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{item.desc}}</p>
+    <p>R$: {{item.valor}}</p>
+    <button mat-raised-button color="success" (click)="openDialog(item)">Comprar</button><button mat-raised-button color="primary">Detalhes</button>
+  </mat-card-content>
+</mat-card>
+

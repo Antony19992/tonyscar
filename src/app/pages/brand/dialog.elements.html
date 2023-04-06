@@ -1,0 +1,27 @@
+
+<h1 mat-dialog-title>Confirme as informações do veículo</h1>
+<div class="form" mat-dialog-content>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Veículo</mat-label>
+    <input matInput [(ngModel)]="item.veiculo" readonly>
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Cor</mat-label>
+    <input matInput [(ngModel)]="item.cor" readonly>
+  </mat-form-field><br>
+<mat-form-field appearance="fill">
+  <mat-label>Valor</mat-label>
+  <input matInput [(ngModel)]="item.valor" readonly>
+</mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput [(ngModel)]="item.desc" readonly></textarea>
+  </mat-form-field>
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="closeWindow()">fechar</button>
+  <button mat-button mat-dialog-open (click)="enviar(item.veiculo)">finalizar</button>
+</div>

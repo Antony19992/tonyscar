@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tonys-car": {
+      "hosting": {
+        "sixseven": [
+          "tonys-car"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tonys-car"
+  }
+}

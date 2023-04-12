@@ -25,6 +25,10 @@ import { FormsModule } from '@angular/forms';
 import { DialogElementsDialog } from './pages/brand/dialog.component';
 import { DialogChoiceDialog } from './pages/choice/dialog.choice.component';
 import { EditComponent } from './pages/edit/edit.component';
+import { ClientComponent } from './pages/client/client.component';
+import { SalesComponent } from './pages/sales/sales.component';
+import { StockComponent } from './pages/stock/stock.component';
+import { VeichleComponent } from './pages/veichle/veichle.component';
 
 
 @NgModule({
@@ -37,7 +41,11 @@ import { EditComponent } from './pages/edit/edit.component';
     IncludeComponent,
     DialogElementsDialog,
     DialogChoiceDialog,
-    EditComponent
+    EditComponent,
+    ClientComponent,
+    SalesComponent,
+    StockComponent,
+    VeichleComponent
   ],
   imports: [
     BrowserModule,

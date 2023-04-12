@@ -3,7 +3,7 @@
     <mat-card-title-group>
       <mat-card-title>{{ item.veiculo }}</mat-card-title>
       <mat-card-subtitle>{{ item.cor }}</mat-card-subtitle>
-      <img style="width: 80px; height: 70px;" mat-card-sm-image src="../../../assets/{{item.img}}" >
+      <img style="width: 80px; height: 70px;" mat-card-sm-image src="../../../assets/{{item.veiculo+'.img'}}" onError="this.src = '../../../assets/default.img'" >
     </mat-card-title-group>
   </mat-card-header>
   <mat-card-content>

@@ -30,6 +30,7 @@ import { SalesComponent } from './pages/sales/sales.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { VeichleComponent } from './pages/veichle/veichle.component';
 import { TableModule } from 'primeng/table';
+import { NewVeichleDialog } from './pages/veichle/new.veichle.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { TableModule } from 'primeng/table';
     ClientComponent,
     SalesComponent,
     StockComponent,
-    VeichleComponent
+    VeichleComponent,
+    NewVeichleDialog
   ],
   imports: [
     BrowserModule,

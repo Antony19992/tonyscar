@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Firestore, collectionData, collection, addDoc, collectionSnapshots, updateDoc, setDoc, doc } from '@angular/fire/firestore';
-import { documentId } from 'firebase/firestore';
+import { deleteDoc } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
 //quando serviço é providedIn root não precisa colocar nos providers.
@@ -25,13 +25,21 @@ export class BuyerService {
     return this.item$;
   }
 
-  includeDoc(collection: any, data: any): Boolean{
+  includeDoc(collection: any, data: any): void{
   addDoc(collection, data)
-    return true
   }
 
-  async updateDoc(collection: string,docId: string, object: any){
+  // inserir doc com id
+  async insertDoc(collection: string, id: string, form: any){
+    await setDoc(doc(this.firestore, collection, id), form);
+  }
+
+  async updateDoc(collection: string, docId: string, object: any){
     await setDoc(doc(this.firestore, collection, docId), object);
+  }
+
+  async delete(collection: string, docId: string){
+    await deleteDoc(doc(this.firestore, collection, docId));
   }
 
 }

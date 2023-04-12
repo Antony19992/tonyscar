@@ -1,6 +1,5 @@
 import { collection, Firestore } from '@angular/fire/firestore';
 import { Component, Inject, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { BuyerService } from 'src/app/services/buyer.service';
 
 import {MatDialog} from '@angular/material/dialog';

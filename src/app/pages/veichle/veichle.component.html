@@ -1,16 +1,21 @@
-<h2>Área de veículos</h2>
+<h2>Área de veículos</h2><p-button label="Novo Veículo" styleClass="p-button-raised p-button-success" (click)="openDialog()"></p-button><br><br>
 
 <table>
   <tr>
     <th>Veículo</th>
     <th>Cor</th>
-    <th>Descrição</th>
+    <th>Preço</th>
     <th>Ação</th>
   </tr>
   <tr *ngFor="let item of item$ | async">
     <td>{{item.veiculo}}</td>
     <td>{{item.cor}}</td>
-    <td>{{item.desc}}</td>
-    <td><div class="botao"><button pButton type="button" class="p-button-raised p-button-rounded" routerLink="/stock">DETALHES</button></div></td>
+    <td>R$ {{item.valor}}</td>
+    <td>
+      <p-button label="editar" styleClass="p-button-raised p-button-text p-button-warning" ></p-button>
+      <p-button label="excluir" styleClass="p-button-raised p-button-text p-button-danger" (click)="excluir(item.veiculo)"></p-button>
+      <p-button label="detalhes" styleClass="p-button-raised p-button-text"></p-button>
+    </td>
   </tr>
 </table>
+

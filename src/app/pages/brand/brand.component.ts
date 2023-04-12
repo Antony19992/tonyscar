@@ -21,7 +21,7 @@ export class BrandComponent {
   constructor(
     private buyerSerivce: BuyerService,
     private firestore: Firestore,
-    public dialog: MatDialog
+    private dialog: MatDialog
     ) {
   }
 

@@ -25,14 +25,14 @@ export class BrandComponent {
     ) {
   }
 
+  ngOnInit(){
+    this.item$ =  this.buyerSerivce.getList();
+  }
+
   openDialog(value: any) {
     this.dialog.open(DialogElementsDialog, {
       data: {item: value}
     });
-  }
-
-  ngOnInit(){
-    this.item$ =  this.buyerSerivce.getList();
   }
 
   add(){

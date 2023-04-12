@@ -1,19 +1,19 @@
-.comprador {
-  margin-top: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.vendedor {
-  margin-top: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 @media (max-width: 500px)
 {
   h1{
     margin-left:33%;
+  }
+  .comprador {
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .vendedor {
+    margin-top: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (min-width: 700px)
@@ -21,10 +21,41 @@
   h1{
     margin-left:42%;
   }
+  .comprador {
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .vendedor {
+    margin-top: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (min-width: 900px)
 {
   h1{
     margin-left:45%;
+  }
+  .container {
+    margin-top: 15%;
+    width: 100%;
+    text-align: center; /* Opcional, para centralizar os itens na tela */
+  }
+  .comprador {
+    display: inline-block;
+    width: 30%; /* Ou qualquer valor que você queira para a largura do item */
+    margin: 0 1%; /* Adiciona uma margem entre os itens */
+    text-align: center; /* Opcional, para centralizar o conteúdo do item */
+    box-sizing: border-box;
+  }
+  .vendedor {
+    display: inline-block;
+    width: 30%; /* Ou qualquer valor que você queira para a largura do item */
+    margin: 0 1%; /* Adiciona uma margem entre os itens */
+    text-align: center; /* Opcional, para centralizar o conteúdo do item */
+    box-sizing: border-box;
   }
 }

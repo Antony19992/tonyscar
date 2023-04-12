@@ -29,6 +29,7 @@ import { ClientComponent } from './pages/client/client.component';
 import { SalesComponent } from './pages/sales/sales.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { VeichleComponent } from './pages/veichle/veichle.component';
+import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { VeichleComponent } from './pages/veichle/veichle.component';
     MaterialModule,
     MenubarModule,
     FormsModule,
+    TableModule,
     TabMenuModule,
     BreadcrumbModule,
     ButtonModule,

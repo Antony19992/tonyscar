@@ -19,4 +19,8 @@ export class NavbarComponent {
       { label: 'Settings', icon: 'pi pi-fw pi-cog' }
     ];
   }
+
+  voltar(){
+    window.history.go(-1);
+  }
 }

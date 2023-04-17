@@ -1,0 +1,24 @@
+@media (max-width: 1800px){
+  a{
+    cursor: pointer;
+    padding-left: 85%;
+  }
+}
+@media (max-width: 750px){
+  a{
+    cursor: pointer;
+    padding-left: 65%;
+  }
+}
+@media (max-width: 500px){
+  a{
+    cursor: pointer;
+    padding-left: 49%;
+  }
+}
+@media (max-width: 400px){
+  a{
+    cursor: pointer;
+    padding-left: 35%;
+  }
+}
